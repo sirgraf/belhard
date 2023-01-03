@@ -7,8 +7,8 @@ output_str = "Результат: "
 for i in range(3):
     calc_list.append(input(": ").strip())
 
-if calc_list[0].replace('.', '').replace(',', '').isdigit() \
-            and calc_list[2].replace('.', '').replace(',', '').isdigit():
+if calc_list[0].replace('.', '', 1).replace(',', '', 1).isdigit() \
+            and calc_list[2].replace('.', '', 1).replace(',', '', 1).isdigit():
     if calc_list[1] == '+':
         output_str += str(float(calc_list[0]) + float(calc_list[2]))
     elif calc_list[1] == '-':
