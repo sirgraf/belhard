@@ -26,7 +26,7 @@ users_dict = {
 
 def dict_something(some_dict):
     for user_ in some_dict:
-        if some_dict[user_]['email'] == '':
-            print(f"No email for: {some_dict[user_]['name'] + ' ' + some_dict[user_]['surname']}")
+        if some_dict.get(user_).get("email") == '':
+            print(f"No email for: {some_dict[user_].get('name') + ' ' + some_dict[user_].get('surname')}")
 
 dict_something(users_dict)
