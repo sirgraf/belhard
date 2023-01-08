@@ -44,7 +44,7 @@ def encrypt_mes(message):
     encoded_mes = ''
     for letter in message:
         if letter != ' ':
-            encoded_mes += MORSE_CODE_DICT[letter.upper()] + ' '
+            encoded_mes += MORSE_CODE_DICT.get(letter.upper(), '?') + ' '
         else:
             encoded_mes += ' '
     return encoded_mes
